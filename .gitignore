@@ -1,0 +1,6 @@
+# IDE and tooling stuff
+.vscode/
+.dart_tool/
+
+# Input files
+**/input.txt
