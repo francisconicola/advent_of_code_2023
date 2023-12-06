@@ -22,7 +22,7 @@ These are my solutions for the [Advent of Code 2023](https://adventofcode.com/20
 4. Run the code.
 
     ```bash
-    dart run advent_of_code_2023 -d1 -p1 -i input/01/ day_01_part_1.txt
+    dart run advent_of_code_2023 -d1 -p1 -i input/01/part_1.txt
     ```
 
     You can use `--help` for parameter explanations.
