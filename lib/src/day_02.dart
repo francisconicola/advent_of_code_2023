@@ -37,5 +37,28 @@ Future<int> solveFirstPart(Stream<String> input) async {
 }
 
 Future<int> solveSecondPart(Stream<String> input) async {
-  throw UnimplementedError();
+  int sum = 0;
+  final [redPattern, greenPattern, bluePattern] =
+      ['red', 'green', 'blue'].map((color) => RegExp('(\\d+) $color')).toList();
+  int matchNumber(String input, RegExp pattern) {
+    return int.tryParse(pattern.firstMatch(input)?.group(1) ?? '') ?? 0;
+  }
+
+  await for (final line in input) {
+    final [_, sets] = line.split(':');
+    int maxRed = 0;
+    int maxGreen = 0;
+    int maxBlue = 0;
+    for (final set in sets.split(';')) {
+      final red = matchNumber(set, redPattern);
+      final green = matchNumber(set, greenPattern);
+      final blue = matchNumber(set, bluePattern);
+      maxRed = max(red, maxRed);
+      maxGreen = max(green, maxGreen);
+      maxBlue = max(blue, maxBlue);
+    }
+    final power = maxRed * maxGreen * maxBlue;
+    sum += power;
+  }
+  return sum;
 }

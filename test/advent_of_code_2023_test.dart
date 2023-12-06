@@ -25,5 +25,10 @@ void main() {
       final solution = await day_02.solveFirstPart(file.toLineStream());
       expect(solution, 8);
     });
+    test('part 2 example', () async {
+      final file = File('input/02/part_2.txt');
+      final solution = await day_02.solveSecondPart(file.toLineStream());
+      expect(solution, 2286);
+    });
   });
 }
