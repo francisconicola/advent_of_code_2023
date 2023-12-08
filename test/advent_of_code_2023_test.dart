@@ -42,7 +42,7 @@ void main() {
     test('part 2 example', () async {
       final file = File('input/03/part_2.txt');
       final solution = await day_03.solveSecondPart(file.toLineStream());
-      expect(solution, null);
+      expect(solution, 467835);
     });
   });
 }
