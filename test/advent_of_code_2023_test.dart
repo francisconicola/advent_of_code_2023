@@ -35,6 +35,6 @@ void main() {
 
   group('day 04', () {
     test('part 1 example', buildTest('input/04/part_1.txt', day_04.solveFirstPart, 13));
-    test('part 2 example', buildTest('input/04/part_2.txt', day_04.solveSecondPart, null));
+    test('part 2 example', buildTest('input/04/part_2.txt', day_04.solveSecondPart, 30));
   });
 }
